@@ -15,8 +15,7 @@ package main;
 public class Main {
 
 	/**
-	 * @param args
-	 *            the command line arguments
+	 * @param args the command line arguments
 	 * @throws Exception 
 	 */
 	public static void main(String[] args) throws Exception {
@@ -49,12 +48,10 @@ public class Main {
 		// probably
 		try {
 			johnThread.join();
-		} catch (InterruptedException e) {
-		}
+		} catch (InterruptedException e) {}
 		try {
 			maryThread.join();
-		} catch (InterruptedException e) {
-		}
+		} catch (InterruptedException e) {}
 
 		// Print the final balance
 		System.out.println("The final balance is " + MakeDeposit.balance);
