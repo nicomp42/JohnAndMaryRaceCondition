@@ -35,15 +35,15 @@ public class MakeDeposit extends Thread {
      * It's synchronized so it's atomic and deterministic. woo hoo. 
      */
     private void doIt() {
-    	// TODO: Take out the "synchronized" statement break this code.
-    	//synchronized (MakeDeposit.class){	// Only one instance of this thread can be here at a time.    	
+    	// TODO: Take out the "synchronized" statement to break this code.
+    	synchronized (MakeDeposit.class){	// Only one instance of this thread can be here at a time.    	
     		// Only one instance of this thread can be here at a time.
 	    	float temp = balance;
 	    	temp = temp + depositAmount;
 	    	// Introduce a little real-word randomness...
 	    	try {Thread.sleep(new Random().nextInt(10));} catch (Exception ex){}	// Definitely OK to eat
 	    	balance = temp;
-    	//}
+    	}
     }
     /**
      * Get the balance on the account

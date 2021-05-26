@@ -1,4 +1,7 @@
 /*
+ *  * Bill Nicholson
+ * nicholdw@ucmail.uc.edu
+ * 
  * The starting balance is $42.
  * We will make two deposits to the same account from two threads.
  * John deposits $100
